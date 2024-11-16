@@ -1,0 +1,43 @@
+{
+    "name": "davidnadejdin/sms-ru",
+    "description": "Package for send sms via sms.ru. Based on official PHP class https://sms.ru/php",
+    "type": "package",
+    "license": "MIT",
+    "keywords": [
+        "laravel"
+    ],
+    "authors": [
+        {
+            "name": "David Nadejdin",
+            "email": "davidnadejdin@gmail.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^7.0|^8.0|^9.0|^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DavidNadejdin\\SmsRu\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DavidNadejdin\\SmsRu\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DavidNadejdin\\SmsRu\\SmsRuServiceProvider"
+            ],
+            "aliases": {
+                "Notifications": "DavidNadejdin\\SmsRu\\Facades\\SmsRu"
+            }
+        }
+    },
+    "require-dev": {
+    }
+}
